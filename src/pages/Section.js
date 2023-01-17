@@ -22,8 +22,14 @@ const Section = () => {
           <Swiper
             modules={[Navigation]}
             navigation={true}
-            spaceBetween={32}
             slidesPerView={2.5}
+            spaceBetween={12}
+            breakpoints={{
+              // when window width is >= 768px
+              768: {
+                spaceBetween: 32,
+              },
+            }}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
           >

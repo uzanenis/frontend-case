@@ -12,8 +12,27 @@ body {
   background-color: #fff;
 }
 
-:root {
-  --swiper-theme-color: #000;
+@font-face {
+  font-family: 'ITC Avant Garde Gothic Pro';
+  src: local('ITCAvantGardePro'), url('./fonts/ITCAvantGardePro-Md.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'ITC Avant Garde Gothic Pro';
+  font-weight: 700;
+  src: local('ITCAvantGardePro'), url('./fonts/ITCAvantGardePro-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: normal;
+  src: local('Avenir'), url('./fonts/Avenir.ttc') format('truetype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 500;
+  src: local('Avenir'), url('./fonts/Avenir.ttc') format('truetype');
 }
 
 @media screen and (max-width: 768px) {
@@ -30,7 +49,6 @@ body {
       .background-image {
         width: 100%;
         height: 437px;
-        object-fit: cover;
         object-position: center;
       }
     }
@@ -62,6 +80,7 @@ body {
     }
 
     .button-01 {
+      display: inline;
       font-family: 'Avenir';
       padding-bottom: 5px;
       border-bottom: 1px solid white;
@@ -79,15 +98,25 @@ body {
     .productImage {
       width: 148px;
       height: 200px;
+      object-fit: cover;
+      object-position: center;
     }
 
     .productTitle {
       width: 100%;
+      height: 40px;
       margin-bottom: 4px;
       font-weight: 400;
       font-size: 12.8px;
       line-height: 20px;
-      /* or 20px */
+      color: black;
+    }
+
+    .price {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12.8px;
     }
 
     .subDescContainer {
@@ -150,14 +179,14 @@ body {
     }
   }
 
-  .productCardContainer {
-    display: flex;
+  .swiper-wrapper{
+    margin-left: 24px;
   }
 
   .swiper-button-next {
     display: none;
   }
-  .swiper-button-prev{
+  .swiper-button-prev {
     display: none;
   }
   .swiper-button-next::after, .swiper-button-prev::after {
@@ -219,16 +248,20 @@ body {
     }
 
     .button-01 {
-      max-width: 146px;
+      width: 146px;
+      display: inline;
       cursor: pointer;
       padding-bottom: 5px;
       border-bottom: 1px solid black;
       color: #000;
-      font-family: 'Avenir';
+      //Typo
+      font-family: 'Avenir', sans-serif;
       font-style: normal;
       font-weight: 900;
       font-size: 12.8px;
       line-height: 17px;
+      text-transform: capitalize;
+
     }
   }
 
@@ -243,11 +276,19 @@ body {
 
     .productTitle {
       width: 100%;
+      font-family: 'Avenir';
       margin-bottom: 4px;
       font-weight: 400;
       font-size: 12.8px;
       line-height: 20px;
       /* or 20px */
+    }
+
+    .price {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12.8px;
     }
 
     .subDescContainer {
@@ -322,18 +363,20 @@ body {
     height: 40px !important;
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    &:after{
+
+    &:after {
       width: 16px;
       height: 16px;
       background-image: url("../public/arrowNext.svg");
     }
   }
-  .swiper-button-prev{
+  .swiper-button-prev {
     width: 40px !important;
     height: 40px !important;
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    &:after{
+
+    &:after {
       width: 16px;
       height: 16px;
       background-image: url("../public/arrowNext.svg");
