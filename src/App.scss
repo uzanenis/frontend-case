@@ -1,4 +1,346 @@
-.container{
-    display: flex;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
 
+body {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+
+:root {
+  --swiper-theme-color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    .item-01 {
+      width: 100%;
+
+      .background-image {
+        width: 100%;
+        height: 437px;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .item-02 {
+      position: absolute;
+      top: 248px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .component-title {
+    padding: 0 24px;
+    margin-bottom: 32px;
+
+    .title-01 {
+      margin-bottom: 16px;
+      //Typo
+      font-family: 'ITC Avant Garde Gothic Pro', sans-serif;
+      color: #FFF;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    .subtitle-01 {
+      display: none;
+    }
+
+    .button-01 {
+      font-family: 'Avenir';
+      padding-bottom: 5px;
+      border-bottom: 1px solid white;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 12.8px;
+      line-height: 17px;
+      color: #FFFFFF;
+    }
+  }
+
+  .productCard-01 {
+    width: 148px;
+
+    .productImage {
+      width: 148px;
+      height: 200px;
+    }
+
+    .productTitle {
+      width: 100%;
+      margin-bottom: 4px;
+      font-weight: 400;
+      font-size: 12.8px;
+      line-height: 20px;
+      /* or 20px */
+    }
+
+    .subDescContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .colorButtonContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          cursor: pointer;
+        }
+
+        :not(:last-child) {
+          margin-right: 9px;
+        }
+
+        .color1, .color2, .color3, .color4 {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+
+          &.active {
+            width: 8px;
+            height: 8px;
+          }
+
+
+        }
+
+        .isActive {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 12px;
+          height: 12px;
+          border: 1px solid black;
+          border-radius: 50%;
+        }
+
+        .color1 {
+          background-color: #99C3CC;
+        }
+
+        .color2 {
+          background-color: #CC9999;
+        }
+
+        .color3 {
+          background-color: #CB99CC;
+        }
+
+        .color4 {
+          background-color: #BCD9B2;
+        }
+      }
+    }
+  }
+
+  .productCardContainer {
+    display: flex;
+  }
+
+  .swiper-button-next {
+    display: none;
+  }
+  .swiper-button-prev{
+    display: none;
+  }
+  .swiper-button-next::after, .swiper-button-prev::after {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+
+    .item-01 {
+      width: 50%;
+
+      .background-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .item-02 {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      width: 50%;
+      padding: 96px 0;
+      background-color: #FFF;
+    }
+  }
+
+  .component-title {
+    padding: 0 120px;
+    margin-bottom: 68px;
+
+    .title-01 {
+      margin-bottom: 12px;
+      //Typo
+      font-family: 'ITC Avant Garde Gothic Pro', sans-serif;
+      color: #000;
+      font-weight: 700;
+      font-size: 31.25px;
+      line-height: 41px;
+    }
+
+    .subtitle-01 {
+      margin-bottom: 32px;
+      //Typo
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: #666666;
+    }
+
+    .button-01 {
+      padding-bottom: 5px;
+      border-bottom: 1px solid black;;
+      text-decoration: none;
+      color: #000;
+    }
+  }
+
+  .productCard-01 {
+    width: 230px;
+
+    .productImage {
+      width: 230px;
+      height: 310px;
+      margin-bottom: 12px;
+    }
+
+    .productTitle {
+      width: 100%;
+      margin-bottom: 4px;
+      font-weight: 400;
+      font-size: 12.8px;
+      line-height: 20px;
+      /* or 20px */
+    }
+
+    .subDescContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .colorButtonContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          cursor: pointer;
+        }
+
+        :not(:last-child) {
+          margin-right: 9px;
+        }
+
+        .color1, .color2, .color3, .color4 {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+
+          &.active {
+            width: 8px;
+            height: 8px;
+          }
+
+
+        }
+
+        .isActive {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 12px;
+          height: 12px;
+          border: 1px solid black;
+          border-radius: 50%;
+        }
+
+        .color1 {
+          background-color: #99C3CC;
+        }
+
+        .color2 {
+          background-color: #CC9999;
+        }
+
+        .color3 {
+          background-color: #CB99CC;
+        }
+
+        .color4 {
+          background-color: #BCD9B2;
+        }
+      }
+    }
+  }
+
+  .productCardContainer {
+    display: flex;
+    padding-left: 120px;
+
+  }
+
+  .swiper-button-next {
+    right: 64.5px !important;
+    width: 40px !important;
+    height: 40px !important;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    &:after{
+      width: 16px;
+      height: 16px;
+      background-image: url("../public/arrowNext.svg");
+    }
+  }
+  .swiper-button-prev{
+    width: 40px !important;
+    height: 40px !important;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    &:after{
+      width: 16px;
+      height: 16px;
+      background-image: url("../public/arrowNext.svg");
+      transform: rotate(0.5turn);
+    }
+  }
+  .swiper-button-next::after, .swiper-button-prev::after {
+    content: "" !important;
+    color: #000 !important;
+    background-position: center center;
+    background-size: 16px;
+    background-repeat: no-repeat;
+
+
+  }
 }

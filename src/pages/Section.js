@@ -1,11 +1,58 @@
-import React from 'react';
+import React from "react";
+import BackgroundImage from "../components/BackgroundImage";
+import Title from "../components/Title";
+import ProductCard from "../components/ProductCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
 
 const Section = () => {
-    return (
-        <div>
-            Section
+  return (
+    <section className="container">
+      <div className="item-01">
+        <BackgroundImage src={"imageBg.png"} />
+      </div>
+      <div className="item-02">
+        <Title />
+
+        <div className="productCardContainer">
+          <Swiper
+            modules={[Navigation]}
+            navigation={true}
+            spaceBetween={32}
+            slidesPerView={2.5}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <SwiperSlide>
+              <ProductCard
+                src={"item01.png"}
+                title="365 Signature Hoodie"
+                price="€33.95"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductCard
+                src={"item03.png"}
+                title="Organic Skinny High Waist Jeans"
+                price="€33.95"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductCard
+                src={"item03.png"}
+                title="Organic Skinny High Waist Jeans"
+                price="€33.95"
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
-    );
+      </div>
+    </section>
+  );
 };
 
 export default Section;

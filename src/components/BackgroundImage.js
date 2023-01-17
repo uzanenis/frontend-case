@@ -2,9 +2,9 @@ import React from 'react';
 
 const BackgroundImage = ({src}) => {
     return (
-        <div>
-            Image
-        </div>
+        <>
+            <img className="background-image" src={src} alt="Background"/>
+        </>
     );
 };
 
