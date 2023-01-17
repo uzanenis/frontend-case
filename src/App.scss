@@ -219,10 +219,16 @@ body {
     }
 
     .button-01 {
+      max-width: 146px;
+      cursor: pointer;
       padding-bottom: 5px;
-      border-bottom: 1px solid black;;
-      text-decoration: none;
+      border-bottom: 1px solid black;
       color: #000;
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 12.8px;
+      line-height: 17px;
     }
   }
 
