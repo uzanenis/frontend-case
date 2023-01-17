@@ -49,7 +49,7 @@ const Section = () => {
             </SwiperSlide>
             <SwiperSlide>
               <ProductCard
-                src={"item03.png"}
+                src={"item02.png"}
                 title="Organic Skinny High Waist Jeans"
                 price="€33.95"
               />

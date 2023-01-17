@@ -29,12 +29,6 @@ body {
   src: local('Avenir'), url('./fonts/Avenir.ttc') format('truetype');
 }
 
-@font-face {
-  font-family: 'Avenir';
-  font-weight: 500;
-  src: local('Avenir'), url('./fonts/Avenir.ttc') format('truetype');
-}
-
 @media screen and (max-width: 768px) {
   .container {
     position: relative;
@@ -48,8 +42,8 @@ body {
 
       .background-image {
         width: 100%;
-        height: 437px;
         object-position: center;
+        object-fit: cover;
       }
     }
 
@@ -358,6 +352,7 @@ body {
   }
 
   .swiper-button-next {
+    top: 135px !important;
     right: 64.5px !important;
     width: 40px !important;
     height: 40px !important;
@@ -371,6 +366,7 @@ body {
     }
   }
   .swiper-button-prev {
+    top: 135px !important;
     width: 40px !important;
     height: 40px !important;
     background-color: transparent;
