@@ -215,10 +215,11 @@ body {
   }
 
   .component-title {
-    padding: 0 120px;
+    padding: 0 106px 0 120px;
     margin-bottom: 68px;
 
     .title-01 {
+      width: 494px;
       margin-bottom: 12px;
       //Typo
       font-family: 'ITC Avant Garde Gothic Pro', sans-serif;
@@ -229,6 +230,7 @@ body {
     }
 
     .subtitle-01 {
+      max-width: 432px;
       margin-bottom: 32px;
       //Typo
       font-family: 'Avenir';
@@ -386,4 +388,8 @@ body {
 
 
   }
+}
+
+.swiper-slide{
+  max-width: 230px!important;
 }
