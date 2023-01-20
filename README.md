@@ -1,4 +1,4 @@
-# Digifist Frontend Case
+#Frontend Case
 
 I used Create React App, Swiper.js, Prettier and Sass for this project.
 ## Available Scripts
